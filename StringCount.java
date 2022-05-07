@@ -10,7 +10,7 @@ public class StringCount {
 		System.out.println("Enter String : ");
 		String s = kz.nextLine();
 		s = s.trim();
-		int num=0,space = 0,charc = 0;
+		int num=0,space = 1,charc = 0 ,c = 0;
 		
 		for ( int i = 0 ; i < s.length(); i++ )
 		{
@@ -27,6 +27,11 @@ public class StringCount {
 				charc++;
 			}
 		}
+		
+		if ( s.length() == 0 )
+		{
+			space = c;
+		}	
 		
 		System.out.println("The numbers in this string are : " + num);
 		System.out.println("The words in this string are : " +(space + 1));
